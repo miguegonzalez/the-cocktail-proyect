@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <header>
+    <div class="row">
+      <a>Tab 1</a>
+      <a>Tab 3</a>
+    </div>
+  </header>
+  <body>
+    <Tab1 />
+    <!--<Tab3 />-->
+  </body>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Tab1 from './components/Tab_1.vue'
+import Tab3 from './components/Tab_3.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Tab1,
+    Tab3,
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import url('@/assets/css/main.scss');
 </style>
