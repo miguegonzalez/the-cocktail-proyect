@@ -12,10 +12,34 @@ $warning: #FFEF63;
 $background-button-active:  #f9f9fb;
 $background-button: #f8f9fa;
 
+$tiny-space: 1px;
 $small-space: 4px;
 $medium-space: 8px;
 $big-space: 12px;
+$huge-space: 16px;
 
+$space-lx-beer-card: $huge-space;
+$size-img: 150px;
+
+.bg-danger {
+  background-color: $error !important;
+}
+
+.bg-info {
+  background-color: $info !important;
+}
+
+.bg-warning {
+  background-color: $warning !important;
+}
+
+.flex-separate-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: $huge-space 0;
+
+}
 
 #app {
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -81,5 +105,51 @@ $big-space: 12px;
     &.active {
         border-color: $primary-dark;
     }
+}
+
+.lx-beer-card {
+  display: flex;
+  border: 1px solid $primary;
+  height: calc($size-img + $space-lx-beer-card *2);
+  margin-bottom: $huge-space;
+
+  &__image {
+    width: $size-img;
+    margin: auto;
+    text-align: center;
+    
+    img {
+      height: $size-img;
+    }
   }
+
+  &__name-beer {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: $small-space;
+    color: $primary;
+  }
+  
+  &__description {
+    font-size: 14px;
+    max-width: 603px;
+  }
+  
+  &__food-pairing {
+    color: $primary-light;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  &__abv {
+    display: flex;
+    align-items: center;
+    width: 86px;
+    height: 32px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: $small-space 0 $small-space $medium-space;
+    margin-top: $space-lx-beer-card;
+  }
+}
 
