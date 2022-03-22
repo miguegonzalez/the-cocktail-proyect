@@ -1,0 +1,85 @@
+/* Colors */
+$primary-light: #4BA7EE;
+$primary: #003970;
+$primary-dark: #001841;
+$secondary: #4E5156;
+$secondary-dark: #000000;
+
+$error: #DB171D;
+$info: #FFAB48;
+$warning: #FFEF63;
+
+$background-button-active:  #f9f9fb;
+$background-button: #f8f9fa;
+
+$small-space: 4px;
+$medium-space: 8px;
+$big-space: 12px;
+
+
+#app {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.lx-radio-button{
+    border: 1px solid $primary-light;
+    margin: 0 $medium-space;
+    padding: $medium-space;
+    height: 100% !important;
+    cursor: pointer;
+
+    &__title {
+      font-size: 1em;
+      font-weight: bold;
+      color: $primary;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: $medium-space;
+    }
+
+    &__description {
+      font-size: 1em;
+      
+      ul {
+        list-style: none;
+        margin: 0;
+        
+        li::before {
+          content: "\2022";
+          color: $secondary;
+          font-weight: bold;
+          display: inline-block; 
+          width: 1em;
+          margin-left: -1em;
+        }
+      }
+    }
+
+    &__button {
+        border: 1px solid transparent;
+        padding: $small-space;
+        margin: $small-space;
+        background-color: $background-button;
+
+        .active & {
+            border-color: $primary-light;
+            background-color: $background-button-active;
+        }
+    }
+
+    &.active {
+        border-color: $primary-dark;
+    }
+  }
+
