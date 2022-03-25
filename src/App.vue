@@ -1,14 +1,20 @@
 <template>
-  <header>
+<div class="h-100 flex-for-column">
+  <nav>
     <div class="row">
-      <a>Tab 1</a>
-      <a>Tab 3</a>
+      <div class="col my-nav">
+        <div class="tab" :class="{'active': !this.TabActive}" @click="changeTab()">Tab 1</div>
+        <div class="tab" :class="{'active': this.TabActive}" @click="changeTab()">Tab 3</div>
+      </div>
     </div>
-  </header>
-  <body>
-    <Tab1 />
-    <!--<Tab3 />-->
-  </body>
+  </nav>
+  <div class="main">
+    <div class="h-100">
+      <Tab1 v-if="!this.TabActive" />
+      <Tab3 v-else />
+    </div>
+  </div>
+</div>
 </template>
 
 <script>
@@ -20,6 +26,16 @@ export default {
   components: {
     Tab1,
     Tab3,
+  },
+  data() {
+    return {
+      TabActive: 0,
+    }
+  },
+  methods: {
+    changeTab() {
+      this.TabActive = !this.TabActive;
+    }
   }
 }
 </script>
