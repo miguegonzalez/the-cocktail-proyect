@@ -37,16 +37,7 @@ export default {
   methods: {
     bgAbv() {
       var abv_value;
-
-      if(this.abv <= "5.0") {
-        abv_value = 'bg-warning';
-      }
-      else if(this.abv >= "10.0") {
-        abv_value = 'bg-danger text-white';
-      }
-      else {
-        abv_value = 'bg-info';
-      }
+      this.abv <= "5.0" ? abv_value = 'bg-warning' : (this.abv >= "10.0" ? abv_value = 'bg-danger text-white' : abv_value = 'bg-info')
       return abv_value;
     }
   }
