@@ -1,0 +1,122 @@
+.lx-beer-card {
+  display: flex;
+
+  background-color: $background-lx-beer-card;
+  border: $border-default $color-border;
+  min-height: calc($size-img + $space-lx-beer-card *2);
+  margin: $huge-space 0;
+
+  &:hover {
+      box-shadow: $box-shadow-default;
+  }
+
+  &__image {
+    width: $size-img;
+    margin: auto;
+    text-align: center;
+    
+    img {
+      height: $size-img;
+    }
+  }
+
+  &__info {
+    @include flex-separate-column;
+  }
+
+  &__name-beer {
+    font-size: 1.125em;
+    font-weight: bold;
+    margin-bottom: $small-space;
+    color: $primary;
+  }
+  
+  &__description {
+    font-size: 0.875em;
+    max-width: 603px;
+  }
+  
+  &__food-pairing {
+    display: block;
+    color: $primary-light;
+    font-size: 0.875em;
+    font-weight: bold;
+    margin-top: $medium-space;
+
+    & > .col {
+      padding: 0;
+    }
+  }
+  
+  &__abv {
+    display: flex;
+    align-items: center;
+    width: 86px;
+    height: 32px;
+    font-size: 1.125em;
+    font-weight: bold;
+    padding: $small-space 0 $small-space $medium-space;
+    margin-top: $space-lx-beer-card;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  li {   
+    width: $width-li-pagination;
+    height: $width-li-pagination;
+    
+    background-color: $secondary;
+    color: white;
+    
+    margin: $medium-space;
+    padding: $small-space;
+    border-radius: $small-space;
+
+    list-style: none;   
+    text-align: center;
+    cursor: pointer;
+
+    transition: background-color 0.7s;
+
+    
+    &.active {
+      transition: background-color 0.7s;
+      background-color: $primary-light;
+    }
+
+  }
+} 
+
+@media screen and (max-width: map-get($breakpoints, md)) {
+  .panel{
+    .title {
+      text-align: left;
+    }
+  }
+}
+
+
+@media screen and (max-width: map-get($breakpoints, sm)) {
+  .lx-beer-card {
+    flex-direction: column;
+    width: 100%;
+
+    &__info {
+      padding: 0;
+    }
+
+    &__image {
+      margin-top: $space-lx-beer-card;
+    }
+
+    &__abv {
+      width: 100%;
+      justify-content: center;
+      padding: 0;
+    }
+  }
+}
