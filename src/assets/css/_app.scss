@@ -1,7 +1,7 @@
 
 /** GLOBAL CLASSES **/
 #app {
-    font-family: "RobotoSlab";
+    font-family: "Roboto";
     height: 100%;
 }
 
@@ -23,6 +23,8 @@ nav {
     .tab {
         display: flex;
         justify-content: center;
+        font-family: "RobotoSlab";
+        font-size: 1em;
         
         width: 120px;
         border-bottom: 2px solid;

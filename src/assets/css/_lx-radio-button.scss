@@ -1,4 +1,13 @@
 $background-lx-radio-button: white;
+
+#tab1 {
+  .title {
+    font-family: "RobotoSlab";
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+}
+
 .radio-button-group {
   display: flex;
   justify-content: stretch;
@@ -19,6 +28,7 @@ $background-lx-radio-button: white;
     }
 
     &__title {
+      font-family: "RobotoBold";
       font-size: 1em;
       font-weight: bold;
       color: $primary;
@@ -34,6 +44,7 @@ $background-lx-radio-button: white;
       ul {
         list-style: none;
         margin: 0;
+        font-size: 0.9375em;
         
         li::before {
           content: "\2022";
@@ -77,16 +88,16 @@ $background-lx-radio-button: white;
       content: '';
       display: inline-block;
       visibility: visible;
-      border: 1px solid $secondary;
-      margin-right: 4px;
+      border: $border-default $secondary;
+      margin-right: $small-space;
     }
 
     input[type='radio']:after {
-      background-color: #fff;
+      background-color: white;
   }
 
   input[type='radio']:checked:after {
-      background-color: #6DC138;
+      background-color: $success;
   }
 }
 
