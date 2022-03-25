@@ -1,10 +1,12 @@
 <template>
-  <div class="lx-radio-button col h-100" :class="[{'active': active}, index]" @click.stop="toogleRowActive">
-    <div class="row lx-radio-button__title">{{ title }}</div>
-    <div class="row lx-radio-button__description">
-      <ul>
-        <li v-for="(show, index) in description" :key="index">{{ show }}</li>
-      </ul>
+  <div class="lx-radio-button row" :class="[{'active': active}, index]" @click.stop="toogleRowActive">
+    <div>
+      <div class="row lx-radio-button__title">{{ title }}</div>
+      <div class="row lx-radio-button__description">
+        <ul>
+          <li v-for="(item, index) in description" :key="index">{{ item }}</li>
+        </ul>
+      </div>
     </div>
     <div class="row lx-radio-button__button">
       <input type="radio" name="choose_scheme" value="Elegir régimen" :checked="active" /> 
