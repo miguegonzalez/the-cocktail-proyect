@@ -1,0 +1,86 @@
+/** BACKGROUND CLASSES **/
+.bg-danger {
+    background-color: $error !important;
+}
+
+.bg-info {
+    background-color: $info !important;
+}
+
+.bg-warning {
+    background-color: $warning !important;
+}
+
+/** COLOR CLASSES **/
+.text-white {
+    color: white !important
+}
+
+/** MOCK CLASSES **/
+.row {
+    @include row;
+}
+
+.col {
+    @include col;
+}
+
+.h-100 {
+    height: 100% !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.overflow-auto {
+    overflow: auto !important;
+}
+
+.p-medium {
+    padding: $medium-space;
+}
+
+/** FLEX CLASSES **/
+.flex-for-column {
+    @include flex-for-column;
+}
+
+.flex-separate-column {
+    @include flex-separate-column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+
+/** SCROLLBAR **/
+.scroller{  // Firefox Scrollbar
+    position: relative;
+    scrollbar-color: $primary-light transparent;
+    scrollbar-width: thin;
+    padding: 20px 10px 20px 10px;
+    border: 0;
+}
+
+::-webkit-scrollbar-track {  // chrome y Safari Scrollbar
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {  // chrome y Safari Scrollbar
+    width: 12px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {  // chrome y Safari Scrollbar
+    border-radius: 4px;
+    background-color: $primary-light;
+    height: auto;
+    width: auto;
+
+    &:hover{
+        opacity: 0.8;
+    }
+}

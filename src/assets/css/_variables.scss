@@ -1,0 +1,44 @@
+$primary-light: #4BA7EE;
+$primary: #003970;
+$primary-dark: #001841;
+$secondary: #4E5156;
+$secondary-dark: #000000;
+
+$error: #DB171D;
+$info: #FFAB48;
+$warning: #FFEF63;
+$success: #6DC138;
+
+$background-button-active:  #f9f9fb;
+$background-button: #f8f9fa;
+
+$background-header: #FFFFFF;
+$background-body: #E5E5E5;
+
+$color-border: #DEE1E8;
+
+$tiny-space: 1px;
+$small-space: 4px;
+$medium-space: 8px;
+$big-space: 12px;
+$huge-space: 16px;
+
+$border-default: $tiny-space solid;
+$w-radio: 12px;
+$width-li-pagination: 20px;
+$width-lx-radio-button: 225px;
+
+$space-lx-beer-card: $huge-space;
+$size-img: 150px;
+
+$space-tab: $big-space;
+
+$background-lx-beer-card: white;
+
+$breakpoints: (
+  sm: 360px,
+  md: 768px,
+  lg: 1280px,
+);
+
+$box-shadow-default: 0 4px 10px 6px rgba(0, 0, 0, 0.2);

@@ -1,0 +1,142 @@
+$background-lx-radio-button: white;
+
+#tab1 {
+  .title {
+    font-family: "RobotoSlab";
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+}
+
+.radio-button-group {
+  display: flex;
+  justify-content: stretch;
+  margin-bottom: $medium-space;
+}
+
+.lx-radio-button{
+    @include flex-separate-column;
+    flex: 1;
+    border: $border-default $primary-light;
+    margin: 0 $medium-space;
+    padding: $medium-space;
+    background-color: $background-lx-radio-button;
+    cursor: pointer;
+    min-width: $width-lx-radio-button;
+    border-radius: 0;
+    transition: border-radius 1.5s, box-shadow 1s;
+    box-shadow: 0 0 rgba(0,0,0, 0);
+
+
+    &:hover {
+      box-shadow: $box-shadow-default;
+      transition: box-shadow 1s;
+    }
+
+    &__title {
+      font-family: "RobotoBold";
+      font-size: 1em;
+      font-weight: bold;
+      color: $primary;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: $medium-space;
+    }
+
+    &__description {
+      font-size: 1em;
+      margin-bottom: $big-space;
+      
+      ul {
+        list-style: none;
+        margin: 0;
+        font-size: 0.9375em;
+        
+        li::before {
+          content: "\2022";
+          color: $secondary;
+          font-weight: bold;
+          display: inline-block; 
+          width: 1em;
+          margin-left: -1em;
+        }
+      }
+    }
+
+    &__button {
+        border: $border-default transparent;
+        padding: $small-space;
+        margin: $small-space;
+        background-color: $background-button;
+
+        .active & {
+            border-color: $primary-light;
+            background-color: $background-button-active;
+        }
+        label {
+          margin-left: $medium-space;
+        }
+    }
+
+    &.active {
+        border-color: $primary-dark;
+        border-radius: 8px;
+        transition: border-radius 1.5s;
+    }
+
+    input[type='radio']:after,
+    input[type='radio']:checked:after {
+      width: calc($w-radio - 4px);
+      height: calc($w-radio - 4px);
+      padding: 2px;
+      border-radius: $w-radio;
+      top: 0px;
+      left: -1px;
+      position: relative;
+      content: '';
+      display: inline-block;
+      visibility: visible;
+      border: $border-default $secondary;
+      margin-right: $small-space;
+    }
+
+    input[type='radio']:after {
+      background-color: white;
+  }
+
+  input[type='radio']:checked:after {
+      background-color: $success;
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, md)) {
+  .radio-button-group {
+    @include row;
+    justify-content: center;
+
+    .lx-radio-button {
+      @include col;
+
+      max-width: $width-lx-radio-button;
+      margin-bottom: $medium-space;
+      flex-basis: auto;
+
+      &__title {
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: map-get($breakpoints, sm)) {
+  .radio-button-group {
+    .lx-radio-button {
+      width: 100%;
+    }
+    
+    .col {
+      flex-basis: auto;
+    }
+  }
+}
