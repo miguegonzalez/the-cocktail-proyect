@@ -5,7 +5,7 @@
         <span>HOTEL <strong>Mieres del Camín Apartamentos</strong></span>
         <img src="../assets/img/stars.png" class="img-title-right" />
       </div>
-      <div class="row">
+      <div class="row overflow-auto">
         <div class="radio-button-group col">
           <lxRadioButton 
               :title="item.title" 
