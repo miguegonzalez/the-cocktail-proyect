@@ -55,6 +55,7 @@ npm run build
 ## Construido con 🛠️
 
 * [VueCli](https://cli.vuejs.org/)
+* [Vue3](https://vuejs.org/)
 * [SCSS] - Maquetación 
 
 ## Autor ✒️
@@ -62,4 +63,4 @@ npm run build
 * **Miguel González** - [miguegonzalez](https://github.com/miguegonzalez)
 
 ### Personalización de la configuración
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Ver [Configuration Reference](https://cli.vuejs.org/config/).
